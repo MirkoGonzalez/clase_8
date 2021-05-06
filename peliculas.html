@@ -27,6 +27,7 @@
                 dynamicTyping: true,
                 complete: function (respuesta) {
                     var peliculas = respuesta.data;
+                    peliculas.pop();
                     console.log(peliculas);
                     peliculas.forEach(function(pelicula,i){
                         document.querySelector("main").innerHTML += "<article><a href='pelicula.html?nro=" + i + "'><img src='images/" + pelicula.pic_sm + "'><div><h2>" + pelicula.name + "</h2></div></article>";
